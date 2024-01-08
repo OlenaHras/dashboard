@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <main class="container">
+      <div class="sidebar">
+        <a href="./index.html" class="logo">
+          <svg class="logo__icon">
+            <use href="./sourse/svg/symbol-defs.svg#icon-logo"></use>
+          </svg>
+          <div>Dashboard<span class="logo__version">v.01</span></div>
+        </a>
+        <ul class="list">
+          <li class="list__item">
+            <a class="list__link">
+              <div class="list__wrapper">
+                <svg class="list__icon">
+                  <use href="./sourse/svg/symbol-defs.svg#icon-key"></use>
+                </svg>
+                <span class="list__text"> Dashboard </span>
+                <!-- <svg class="list__arrow">
+                  <use href="./sourse/svg/symbol-defs.svg#icon-right"></use>
+                </svg> -->
+              </div>
+            </a>
+          </li>
+          <li class="list__item">
+            <a class="list__link">
+              <div class="list__wrapper">
+                <svg class="list__icon">
+                  <use href="./sourse/svg/symbol-defs.svg#icon-d-square"></use>
+                </svg>
+                <span class="list__text"> Product </span>
+              </div>
+              <svg class="list__arrow">
+                <use href="./sourse/svg/symbol-defs.svg#icon-right"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="list__item">
+            <a class="list__link">
+              <div class="list__wrapper">
+                <svg class="list__icon">
+                  <use href="./sourse/svg/symbol-defs.svg#icon-user"></use>
+                </svg>
+                <span class="list__text"> Customers </span>
+              </div>
+              <svg class="list__arrow">
+                <use href="./sourse/svg/symbol-defs.svg#icon-right"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="list__item">
+            <a class="list__link">
+              <div class="list__wrapper">
+                <svg class="list__icon">
+                  <use
+                    href="./sourse/svg/symbol-defs.svg#icon-wallet-money1"
+                  ></use>
+                </svg>
+                <span class="list__text"> Income </span>
+              </div>
+              <svg class="list__arrow">
+                <use href="./sourse/svg/symbol-defs.svg#icon-right"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="list__item">
+            <a class="list__link">
+              <div class="list__wrapper">
+                <svg class="list__icon">
+                  <use
+                    href="./sourse/svg/symbol-defs.svg#icon-discount-shape"
+                  ></use>
+                </svg>
+                <span class="list__text"> Promote </span>
+              </div>
+              <svg class="list__arrow">
+                <use href="./sourse/svg/symbol-defs.svg#icon-right"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="list__item">
+            <a class="list__link">
+              <div class="list__wrapper">
+                <svg class="list__icon">
+                  <use
+                    href="./sourse/svg/symbol-defs.svg#icon-message-question"
+                  ></use>
+                </svg>
+                <span class="list__text"> Help </span>
+              </div>
+              <svg class="list__arrow">
+                <use href="./sourse/svg/symbol-defs.svg#icon-right"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <div class="user">
+          <img src="./sourse/img/avatar.png" />
+          <div class="user__info">
+            <div class="user__name">Evano</div>
+            <div class="user__position">Project Manager</div>
+          </div>
+        </div>
+      </div>
+      <div class="info">
+        <h1 class="info__title">Hello Evano 👋🏼,</h1>
+        <div class="customers">
+          <div class="customers__search">
+            <div class="customers__head">
+              <h2 class="customers__title">All Customers</h2>
+              <span class="customers__active">Active Members</span>
+            </div>
+            <form>
+              <input class="search" type="search" placeholder="Search" />
+            </form>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>Customer Name</th>
+                <th>Company</th>
+                <th>Phone Number</th>
+                <th>Email</th>
+                <th>Country</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Jane Cooper</td>
+                <td>Microsoft</td>
+                <td>(225) 555-0118</td>
+                <td>jane@microsoft.com</td>
+                <td>United States</td>
+                <td><button>Active</button></td>
+              </tr>
+              <tr>
+                <td>Floyd Miles</td>
+                <td>Yahoo</td>
+                <td>(205) 555-0100</td>
+                <td>floyd@yahoo.com</td>
+                <td>Kiribati</td>
+                <td><button>Inactive</button></td>
+              </tr>
+              <tr>
+                <td>Ronald Richards</td>
+                <td>Adobe</td>
+                <td>(302) 555-0107</td>
+                <td>ronald@adobe.com</td>
+                <td>Israel</td>
+                <td><button>Inactive</button></td>
+              </tr>
+              <tr>
+                <td>Marvin McKinney</td>
+                <td>Tesla</td>
+                <td>(252) 555-0126</td>
+                <td>marvin@tesla.com</td>
+                <td>Iran</td>
+                <td><button>Active</button></td>
+              </tr>
+              <tr>
+                <td>Jerome Bell</td>
+                <td>Google</td>
+                <td>(629) 555-0129</td>
+                <td>jerome@google.com</td>
+                <td>Réunion</td>
+                <td><button>Active</button></td>
+              </tr>
+              <tr>
+                <td>Kathryn Murphy</td>
+                <td>Microsoft</td>
+                <td>(406) 555-0120</td>
+                <td>kathryn@microsoft.com</td>
+                <td>Curaçao</td>
+                <td><button>Active</button></td>
+              </tr>
+              <tr>
+                <td>Jacob Jones</td>
+                <td>Yahoo</td>
+                <td>(208) 555-0112</td>
+                <td>jacob@yahoo.com</td>
+                <td>Brazil</td>
+                <td><button>Active</button></td>
+              </tr>
+              <tr>
+                <td>Kristin Watson</td>
+                <td>Facebook</td>
+                <td>(704) 555-0127</td>
+                <td>kristin@facebook.com</td>
+                <td>Åland Islands</td>
+                <td><button>Inactive</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
