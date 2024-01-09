@@ -23,11 +23,11 @@
 //   gap: 71px;
 // }
 
-@import "./styles/_general.scss";
-@import "./styles/_sidebar.scss";
-@import "./styles/_user.scss";
-@import "./styles/_table.scss";
-@import "./styles/_pagination.scss";
+@import "./_general.scss";
+@import "./_sidebar.scss";
+@import "./_user.scss";
+@import "./_table.scss";
+@import "./_pagination.scss";
 // .sidebar {
 //   position: sticky;
 //   top: 0;
@@ -45,10 +45,10 @@
 //     transition: 0.5s;
 //   }
 // }
-// // .sidebar:hover {
-// //   width: 306px;
-// //   transition: 0.5s;
-// // }
+// .sidebar:hover {
+//   width: 306px;
+//   transition: 0.5s;
+// }
 // .logo {
 //   display: flex;
 //   gap: 8px;
