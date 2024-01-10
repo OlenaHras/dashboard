@@ -53,6 +53,11 @@
       color: #fff;
       background: #5932ea;
     }
+    &.active {
+      border: 1px solid #5932ea;
+      color: #fff;
+      background: #5932ea;
+    }
   }
 
   &__button:hover .pagination__arrow use {

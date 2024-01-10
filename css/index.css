@@ -742,6 +742,12 @@ td {
   background: #5932ea;
 }
 
+.pagination__button.active {
+  border: 1px solid #5932ea;
+  color: #fff;
+  background: #5932ea;
+}
+
 .pagination__button:hover .pagination__arrow use {
   fill: #5932ea !important;
   stroke: #fff !important;
