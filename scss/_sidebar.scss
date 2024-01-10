@@ -1,36 +1,61 @@
+@import "./mixins";
+
 .sidebar {
-  position: sticky;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 74px;
-  height: 1198px;
-  padding: 37px 28px 76px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 6px;
   background: #fff;
   box-shadow: 0px 10px 60px 0px rgba(226, 236, 249, 0.5);
-  transition: all 0.5s linear;
-  overflow: hidden;
+
+  @include media(tablet) {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 62px;
+    height: 1198px;
+    padding: 37px 45px 76px 17px;
+
+    transition: all 0.5s linear;
+    overflow: hidden;
+    z-index: 10;
+  }
+
+  @include media(desktop) {
+    padding: 37px 28px 76px;
+    width: 74px;
+    position: sticky;
+  }
   &:hover {
-    width: 306px;
     transition: 0.5s;
+    @include media(tablet) {
+      width: 306px;
+    }
+    @include media(desktop) {
+      width: 306px;
+    }
   }
 }
 
-// .sidebar:hover {
-//   width: 306px;
-//   transition: 0.5s;
-// }
 .logo {
   display: flex;
   gap: 8px;
   align-items: center;
   width: 250px;
+  height: 68px;
   color: #000;
-  font-size: 26px;
+  font-size: 16px;
   font-weight: 600;
   letter-spacing: 0.26px;
-  margin-bottom: 65px;
 
+  @include media(tablet) {
+    font-size: 26px;
+    margin-bottom: 65px;
+  }
   &__icon {
     width: 37px;
     height: 37px;
@@ -43,16 +68,109 @@
     letter-spacing: -0.1px;
   }
 }
-// .logo__icon {
-//   width: 37px;
-//   height: 37px;
-// }
-// .logo__version {
-//   color: #838383;
-//   font-size: 10px;
-//   font-weight: 500;
-//   letter-spacing: -0.1px;
-// }
+
+.burger {
+  width: 50px;
+  display: flex;
+  align-items: center;
+
+  &__toggle {
+    opacity: 0;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 12;
+
+    @include media(tablet) {
+      display: none;
+    }
+  }
+}
+
+.burger__btn > .burger__span,
+.burger__btn > .burger__span::before,
+.burger__btn > .burger__span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #616161;
+}
+.burger__btn > .burger__span::before {
+  content: "";
+  top: -8px;
+}
+.burger__btn > .burger__span::after {
+  content: "";
+  top: 8px;
+}
+
+.burger__toggle:checked ~ .burger__btn {
+  position: fixed;
+
+  & > .burger__span {
+    transform: rotate(45deg);
+
+    &::before {
+      top: 0;
+      transform: rotate(0);
+    }
+
+    &::after {
+      top: 0;
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.burger__toggle:checked ~ .list {
+  visibility: visible;
+  left: 0;
+}
+.burger__btn > .burger__span,
+.burger__btn > .burger__span::before,
+.burger__btn > .burger__span::after {
+  transition-duration: 0.25s;
+}
+.burger__box {
+  transition-duration: 0.25s;
+}
+.burger__item {
+  transition-duration: 0.25s;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  z-index: 11;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 80px 0;
+  text-align: center;
+  background-color: #fff;
+
+  @include media(tablet) {
+    position: absolute;
+    top: 139px;
+    align-items: flex-start;
+    visibility: visible;
+    width: 306px;
+    padding: 0;
+    overflow: hidden;
+    height: fit-content;
+  }
+}
 
 .list__item {
   margin-bottom: 18px;
@@ -85,14 +203,10 @@
 .active {
   border-radius: 8px;
   background: #5932ea;
-
-  &.list__text {
-    color: #fff;
-  }
 }
-// .active .list__text {
-//   color: #fff;
-// }
+.active .list__text {
+  color: #fff;
+}
 
 .list__wrapper {
   display: flex;
@@ -100,14 +214,9 @@
   gap: 14px;
 }
 
-/* .list__icon path {
-  fill: #fff !important;
-  stroke: #9197b3 !important;
-} */
 .list__icon {
   width: 24px;
   height: 24px;
-  /* stroke: #9197b3 !important; */
 }
 
 .list__link:hover .list__icon use {
